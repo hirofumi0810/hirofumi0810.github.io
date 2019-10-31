@@ -236,3 +236,9 @@ html, body {
 .mdl-demo .mdl-menu__container {
   z-index: 99;
 }
+
+img{
+  background-color: white;
+  width: 250px;
+  object-fit: contain;
+}
