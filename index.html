@@ -133,10 +133,19 @@
               <!-- research topic -->
               <h3 id="reseach_topic">Research topic&#x1f9d0;</h3>
 
+              <strong>CTC-synchronous training for monotonic chunkwise attention (MoChA)</strong>
+              <ul>
+                  <img src="images/ctc_sync.png" alt=" " align="left" hspace="20">
+                  Proposed a new training method, CTC-synchronous training (CTC-ST), for MoChA to learn reliable alignments (token boundaries) by leveraging CTC spikes as reference alignments. MoChA with CTC-ST is very robust to long utterances. CTC-ST can also bring out the full potential of SpecAugment for MoChA. CTC is trained by sharing the same encoder and thus training is still end-to-end.
+                  <br>See details in
+                  [<a href="https://arxiv.org/abs/2005.04712" target="_blank" rel="nofollow">arxiv</a>].
+                  <br clear="left">
+              </ul>
+
               <strong>Minimum latency training for online streaming sequence-to-sequence ASR</strong>
               <ul>
                   <img src="images/icassp2020.png" alt=" " align="left" hspace="20">
-                  Tackled the delayed token generation problem to minimize perceived latency in online streaming sequence-to-sequence ASR models. Proposed latency reduction methods by leveraging external hard alignmetns extracted from the conventional hybird ASR systems.
+                  Tackled the delayed token generation problem to minimize perceived latency in online streaming sequence-to-sequence ASR models. Proposed latency reduction methods by leveraging external hard alignments extracted from the conventional hybird ASR systems.
                   <br>See details in
                   [<a href="https://arxiv.org/abs/2004.05009" target="_blank" rel="nofollow">Inaguma et al., ICASSP2020</a>].
                   <br clear="left">
