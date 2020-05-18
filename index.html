@@ -21,7 +21,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <title>Material Design Lite</title>
+    <title>Hirofumi Inaguma</title>
 
     <!-- Add to homescreen for Chrome on Android -->
     <meta name="mobile-web-app-capable" content="yes">
@@ -81,11 +81,13 @@
           <section class="section--center mdl-grid mdl-grid--no-spacing">
             <div class="mdl-cell mdl-cell--12-col">
               <h3>News&#x1f600;</h3>
+              <li>05/2020: New preprint available at [<a href="https://arxiv.org/abs/2005.04712" target="_blank" rel="nofollow">arxiv</a>].</li>
+              <li>05/2020: Our work on ESPnet-ST is appeared in <a href="https://slator.com/machine-translation/now-on-github-new-speech-to-speech-translation-toolkit/" target="_blank" rel="nofollow">slator</a>.</li>
               <li>04/2020: One paper got accepted to ACL2020 system demo session.<br>
-                &ensp;&ensp;&ensp;&ensp;”<strong><i>ESPnet-ST: All-in-One Speech Translation Toolkit</i></strong>” (1st-author)<br>
+                &ensp;&ensp;&ensp;&ensp;”<strong><i>ESPnet-ST: All-in-One Speech Translation Toolkit</i></strong>” [<a href="https://arxiv.org/abs/2004.10234" target="_blank" rel="nofollow">arxiv</a>] (1st-author)<br>
               </li>
               <li>01/2020: One paper got accepted to IEEE ICASSP2020. See you in Barcelona, Spain🇪🇸!<br>
-                &ensp;&ensp;&ensp;&ensp;”<strong><i>Minimum Latency Training Strategies for Streaming Sequence-to-Sequence ASR</i></strong>” (1st-author)<br>
+                &ensp;&ensp;&ensp;&ensp;”<strong><i>Minimum Latency Training Strategies for Streaming Sequence-to-Sequence ASR</i></strong>” [<a href="https://arxiv.org/abs/2004.05009" target="_blank" rel="nofollow">arxiv</a>] [<a href="./materials/slide/202004_ICASSP2020.pdf" target="_blank" rel="nofollow">slide</a>] (1st-author)<br>
               </li>
               <li>10/2019: Recieved the Microsoft Research Asia Ph.D. Fellowship Award 2019.
                 [<a href="https://www.microsoft.com/en-us/research/academic-program/fellowships-microsoft-research-asia/" target="_blank" rel="nofollow">link</a>]
@@ -100,7 +102,7 @@
               <h3>About Me</h3>
               <!-- <p> -->
                 <img src="images/profile.png" width="270" height="240" alt=" " align="left" hspace="20">
-                  I'm 3rd-year Ph.D. student at <a href="http://www.i.kyoto-u.ac.jp/en/" target="_blank" rel="nofollow">Graduate School of Informatics, Kyoto University</a>, Kyoto, Japan.<br>
+                  3rd-year Ph.D. student at <a href="http://www.i.kyoto-u.ac.jp/en/" target="_blank" rel="nofollow">Graduate School of Informatics, Kyoto University</a>, Kyoto, Japan.<br>
                   My CV is available <a href="./materials/CV_Hirofumi_Inaguma.pdf" target="_blank" rel="nofollow">here</a>.<br><br>
 
                   <strong>Email (office)</strong>: inaguma [at] sap.ist.i.kyoto-u.ac.jp<br>
@@ -119,7 +121,7 @@
                 <li>End-to-end speech recognition</li>
                 <li>Multilingual end-to-end speech recognition</li>
                 <li>Language modeling</li>
-                <li>Online/Streaming ASR</li>
+                <li>Online streaming ASR</li>
               </ul>
 
               <strong>Speech translation</strong>
@@ -128,20 +130,22 @@
                 <li>Multilingual end-to-end speech translation</li>
               </ul>
 
-              <strong>Machine Learning</strong>
-              <ul>
-                <li>Transfer learning</li>
-                <li>Semi-supervised training</li>
-                <!-- <li>Unsupervised pre-training</li> -->
-              </ul>
-
               <!-- research topic -->
               <h3 id="reseach_topic">Research topic&#x1f9d0;</h3>
+
+              <strong>Minimum latency training for online streaming sequence-to-sequence ASR</strong>
+              <ul>
+                  <img src="images/icassp2020.png" alt=" " align="left" hspace="20">
+                  Tackled the delayed token generation problem to minimize perceived latency in online streaming sequence-to-sequence ASR models. Proposed latency reduction methods by leveraging external hard alignmetns extracted from the conventional hybird ASR systems.
+                  <br>See details in
+                  [<a href="https://arxiv.org/abs/2004.05009" target="_blank" rel="nofollow">Inaguma et al., ICASSP2020</a>].
+                  <br clear="left">
+              </ul>
 
               <strong>Multilingual end-to-end speech translation</strong>
               <ul>
                   <img src="images/asru2019.png" alt=" " align="left" hspace="20">
-                  Conducted an effective multilingual training into the end-to-end speech translation (E2E-ST) task, and showed significant improvements of the translation performances compared to the conventional bilingual models.
+                  Proposed an effective multilingual training into the end-to-end speech translation (E2E-ST) task, and showed significant improvements of translation performances compared to conventional bilingual models.
                   <br>See details in
                   [<a href="https://arxiv.org/abs/1910.00254" target="_blank" rel="nofollow">Inaguma et al., ASRU2019</a>].
                   <br clear="left">
@@ -150,7 +154,7 @@
               <strong>Multilingual end-to-end speech recognition</strong>
               <ul>
                   <img src="images/icassp2019.png" alt=" " align="left" hspace="20">
-                  Developed the language-independent end-to-end ASR system based on a single sequence-to-sequence model, and successfully adapted to unseen languages with the external language model on the target language.
+                  Proposed an adaptation starategy of the language-independent end-to-end ASR model based on a single sequence-to-sequence architecture to unseen languages by integrating information from the external language model trained on the target language.
                   <br>See details in
                   [<a href="https://arxiv.org/abs/1811.02134" target="_blank" rel="nofollow">Inaguma et al., ICASSP2018</a>].
                   <br clear="left">
@@ -159,7 +163,7 @@
               <strong>Acoustic-to-word (A2W) sequence-to-sequence speech recognition without out-of-vocabulary (OOV) words</strong>
               <ul>
                   <img src="images/slt2018.png" alt=" " align="left" hspace="20">
-                  Proposed a sequence-to-sequence ASR model which directly outputs words, and resolves the out-of-vocabulary (OOV) problem by referring to the character-level hypothesis obtained from the character-level decoder by sharing the same encoder.
+                  Proposed a sequence-to-sequence ASR model which directly generates whole word tokens, and resolves the out-of-vocabulary (OOV) problem by referring to the character-level hypothesis obtained from the character-level decoder by sharing the same encoder.
                   <br>See details in
                   [<a href="http://www.sap.ist.i.kyoto-u.ac.jp/lab/bib/intl/UEN-ICASSP18.pdf" target="_blank" rel="nofollow">Ueno et al., ICASSP2018</a>],
                   [<a href="https://arxiv.org/abs/1909.09993" target="_blank" rel="nofollow">Inaguma et al., SLT2018</a>],
@@ -254,6 +258,16 @@
         <div class="mdl-layout__tab-panel" id="publications">
           <section class="section--center mdl-grid mdl-grid--no-spacing">
             <div class="mdl-cell mdl-cell--12-col">
+              <h3>Preprint</h3>
+              <ul>
+                <!-- Interspeech2020 -->
+                <li>
+                    <u><strong>Hirofumi Inaguma</strong></u>, Masato Mimura, Tatsuya Kawahara,
+                    ”<strong><i>CTC-synchronous Training for Monotonic Attention Model </i></strong>”.
+                    [<a href="https://arxiv.org/abs/2005.04712" target="_blank" rel="nofollow">arxiv</a>]
+                </li>
+              </ul>
+
               <h3>International conference (Review paper, first author)</h3>
               <ul>
                 <!-- ACL2020 -->
@@ -261,6 +275,7 @@
                     <u><strong>Hirofumi Inaguma</strong></u>, Shun Kiyono, Kevin Duh, Shigeki Karita, Nelson Yalta, Tomoki Hayashi and Shinji Watanabe,
                     ”<strong><i>ESPnet-ST: All-in-One Speech Translation Toolkit</i></strong>”,
                     the 58th Annual Meeting of the Association for Computational Linguistics (<strong>ACL</strong>): System Demonstrations, 2020 (to appear).
+                    [<a href="https://arxiv.org/abs/2004.10234" target="_blank" rel="nofollow">arxiv</a>]
                     <!-- [<a href="https://arxiv.org/abs/" target="_blank" rel="nofollow">arxiv</a>] -->
                 </li>
                 <br>
@@ -270,7 +285,9 @@
                     ”<strong><i>Minimum Latency Training Strategies for Streaming Sequence-to-Sequence ASR</i></strong>”,
                     IEEE International Conference on Acoustics, Speech and Signal Processing (<strong>ICASSP</strong>), 2020.
                     (Acceptance Rate: <strong>47</strong>%, <strong>Oral</strong>)
-                    <!-- [<a href="https://arxiv.org/abs/" target="_blank" rel="nofollow">arxiv</a>] -->
+                    [<a href="https://arxiv.org/abs/2004.05009" target="_blank" rel="nofollow">arxiv</a>]
+                    [<a href="./materials/slide/202004_ICASSP2020.pdf" target="_blank" rel="nofollow">slide</a>]
+                    [<a href="https://ieeexplore.ieee.org/document/9054098" target="_blank" rel="nofollow">IEEE Xplore</a>]
                 </li>
                 <br>
                 <!-- ASRU2019 -->
@@ -282,6 +299,7 @@
                     [<a href="https://arxiv.org/abs/1910.00254" target="_blank" rel="nofollow">arxiv</a>]
                     [<a href="http://sap.ist.i.kyoto-u.ac.jp/EN/bib/intl/INA-ASRU19.pdf" target="_blank" rel="nofollow">pdf</a>]
                     [<a href="./materials/poster/201912_ASRU2019_poster.pdf" target="_blank" rel="nofollow">poster</a>]
+                    [<a href="https://ieeexplore.ieee.org/document/9003832" target="_blank" rel="nofollow">IEEE Xplore</a>]
                 </li>
                 <br>
                 <!-- ICASSP2019 -->
@@ -293,6 +311,7 @@
                     [<a href="https://arxiv.org/abs/1811.02134" target="_blank" rel="nofollow">arxiv</a>]
                     [<a href="http://sap.ist.i.kyoto-u.ac.jp/EN/bib/intl/INA-ICASSP19.pdf" target="_blank" rel="nofollow">pdf</a>]
                     [<a href="./materials/poster/201905_ICASSP2019_poster.pdf" target="_blank" rel="nofollow">poster</a>]
+                    [<a href="https://ieeexplore.ieee.org/document/8682918" target="_blank" rel="nofollow">IEEE Xplore</a>]
                 </li>
                 <br>
                 <!-- SLT2018 -->
@@ -304,6 +323,7 @@
                     [<a href="https://arxiv.org/abs/1909.09993" target="_blank" rel="nofollow">arxiv</a>]
                     [<a href="http://sap.ist.i.kyoto-u.ac.jp/lab/bib/intl/INA-SLT18.pdf" target="_blank" rel="nofollow">pdf</a>]
                     [<a href="./materials/poster/201812_SLT2018_poster.pdf" target="_blank" rel="nofollow">poster</a>]
+                    [<a href="https://ieeexplore.ieee.org/document/8639563" target="_blank" rel="nofollow">IEEE Xplore</a>]
                 </li>
                 <br>
                 <!-- IWSLT2018 -->
@@ -322,6 +342,7 @@
                     (Acceptance Rate: 1406/2830=<strong>49.7</strong>%)
                     [<a href="http://sap.ist.i.kyoto-u.ac.jp/EN/bib/intl/INA-ICASSP18.pdf" target="_blank" rel="nofollow">pdf</a>]
                     [<a href="./materials/poster/201804_ICASSP2018_poster.pdf" target="_blank" rel="nofollow">poster</a>]
+                    [<a href="https://ieeexplore.ieee.org/document/8462578" target="_blank" rel="nofollow">IEEE Xplore</a>]
                 </li>
                 <br>
                 <!-- Interspeech2017 -->
@@ -348,6 +369,7 @@
                     ”<strong><i>A Comparative Study on Transformer vs RNN in Speech Applications</i></strong>”,
                     IEEE Automatic Speech Recognition and Understanding Workshop (<strong>ASRU</strong>), 2019.
                     [<a href="https://arxiv.org/abs/1909.06317" target="_blank" rel="nofollow">arxiv</a>]
+                    [<a href="https://ieeexplore.ieee.org/document/9003750" target="_blank" rel="nofollow">IEEE Xplore</a>]
                 </li>
                 <br>
                 <!-- ICASSP2019 -->
@@ -356,6 +378,7 @@
                     ”<strong><i>Language Model Integration Based on Memory Control for Sequence to Sequence Speech Recognition</i></strong>”,
                     IEEE International Conference on Acoustics, Speech and Signal Processing (<strong>ICASSP</strong>), 2019.
                     [<a href="https://arxiv.org/abs/1811.02162" target="_blank" rel="nofollow">arxiv</a>]
+                    [<a href="https://ieeexplore.ieee.org/document/8683380" target="_blank" rel="nofollow">IEEE Xplore</a>]
                 </li>
                 <br>
                 <!-- SLT2018 -->
@@ -364,6 +387,7 @@
                     ”<strong><i>Leveraging Sequence-to-Sequence Speech Synthesis for Enhancing Acoustic-to-Word Speech Recognition</i></strong>”,
                     IEEE Spoken Language Technology Workshop (<strong>SLT</strong>), 2018.
                     [<a href="http://sap.ist.i.kyoto-u.ac.jp/lab/bib/intl/MIM-SLT18.pdf" target="_blank" rel="nofollow">pdf</a>]
+                    [<a href="https://ieeexplore.ieee.org/document/8639589" target="_blank" rel="nofollow">IEEE Xplore</a>]
                 </li>
                 <br>
                 <!-- ICASSP 2018 -->
@@ -372,6 +396,7 @@
                     ”<strong><i>Acoustic-to-Word Attention-Based Model Complemented with Character-level CTC-Based Model</i></strong>”,
                     IEEE International Conference on Acoustics, Speech and Signal Processing (<strong>ICASSP</strong>), 2018.
                     [<a href="http://www.sap.ist.i.kyoto-u.ac.jp/lab/bib/intl/UEN-ICASSP18.pdf" target="_blank" rel="nofollow">pdf</a>]
+                    [<a href="https://ieeexplore.ieee.org/document/8462576" target="_blank" rel="nofollow">IEEE Xplore</a>]
                 </li>
               </ul>
             </div>
