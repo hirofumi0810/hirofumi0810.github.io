@@ -2,9 +2,8 @@
   <head>
     <meta charset="UTF-8">
     <title>Attenion visualization from "Enhancing Monotonic Multihead Attention for Streaming ASR"</title>
+    <link rel="stylesheet" href="../..//styles.css">
     <link rel="stylesheet" href="./styles.css">
-    <!-- <link rel="stylesheet" href="../..//styles.css"> -->
-    <!-- <link rel="shortcut icon" href="../../images/interspeech2020_enhancing_mma_asr.png"> -->
   </head>
   <body>
     <article>
@@ -13,31 +12,124 @@
       </header>
     </article>
 
-    <div><b>Paper:</b> <a href="https://arxiv.org/abs/***">arXiv</a></div>
-    <div><b>Code:</b> <a href="https://github.com/hirofumi0810/neural_sp">GitHub</a></div>
-    <br>
-    <div><b>Paper Title:</b> Enhancing Monotonic Multihead Attention for Streaming ASR</div>
-    <div><b>Authors:</b> Hirofumi Inaguma, Masato Mimura, Tatsuya Kawahara (Graduate School of Informatics, Kyoto University, Kyoto, Japan)</div>
-    <br>
-    <div><b>Abstract:</b>
-      We investigate a monotonic multihead attention (MMA) by extending hard monotonic attention to Transformer-based automatic speech recognition (ASR) for online streaming applications.
-      For streaming inference, all monotonic attention (MA) heads should learn proper alignments because the next token is not generated until all heads detect the corresponding token boundaries.
-      However, we found not all MA heads learn alignments with a naïve implementation.
-      To encourage every head to learn alignments properly, we propose HeadDrop regularization by masking out a part of heads stochastically during training.
-      Furthermore, we propose to prune redundant heads to improve consensus among heads for boundary detection and prevent delayed token generation caused by such heads.
-      Chunkwise attention on each MA head is extended to the multihead counterpart.
-      Finally, we propose head-synchronous beam search decoding to guarantee stable streaming inference.
-    </div>
-    <br>
-    <div><b>System overview</b><img src="../../images/interspeech2020_enhancing_mma_asr.png" alt=" " align="left" hspace="100"></div>
+    <main class="mdl-layout__content">
+      <div>This repository includes various attention visualization examples of monotonic multihead attention (MMA) for online streaming end-to-end ASR task.</div><br>
+      <div><b>Paper:</b> <a href="https://arxiv.org/abs/***">arXiv</a></div>
+      <div><b>Code:</b> <a href="https://github.com/hirofumi0810/neural_sp">GitHub</a></div>
+      <br>
+      <div><b>Paper Title:</b> Enhancing Monotonic Multihead Attention for Streaming ASR</div>
+      <div><b>Authors:</b> Hirofumi Inaguma, Masato Mimura, Tatsuya Kawahara (Graduate School of Informatics, Kyoto University, Kyoto, Japan)</div>
+      <br>
+      <div><b>Abstract:</b>
+          We investigate a monotonic multihead attention (MMA) by extending hard monotonic attention to Transformer-based automatic speech recognition (ASR) for online streaming applications.
+          For streaming inference, all monotonic attention (MA) heads should learn proper alignments because the next token is not generated until all heads detect the corresponding token boundaries.
+          However, we found not all MA heads learn alignments with a naïve implementation.
+          To encourage every head to learn alignments properly, we propose HeadDrop regularization by masking out a part of heads stochastically during training.
+          Furthermore, we propose to prune redundant heads to improve consensus among heads for boundary detection and prevent delayed token generation caused by such heads.
+          Chunkwise attention on each MA head is extended to the multihead counterpart.
+          Finally, we propose head-synchronous beam search decoding to guarantee stable streaming inference.
+      </div>
+      <br>
+      <div>
+        <h2>System overview</h2>
 
-    <div><b>Offline MMA models (Librispeech960h)</b><br>
+        <img src="../../images/interspeech2020_enhancing_mma_asr.png" hspace="100">
+      </div><br>
 
-    </div>
+      <h2>Attention visualization</h2>
+      Upper (lower) yellow dots reprsent detected token boundaries by MA heads in upper (lower) decoder layers.<br>
+      Left: Utterance ID "116-288045-0000" from dev-other set<br>
+      Right: Utterance ID "116-288045-0001" from dev-other set
 
-    <div><b>Streaming MMA models</b><br>
+      <h3>Offline MMA models with standard beam search decoding (Librispeech960h)</h3>
+        <div><b>1. Baseline MMA</b> (A1 in Table1)<br>
+          <table border="0">
+            <tr>
+            <td><img src="./examples/table1/baseline_A1/116-288045-0000.png" hspace="50"></td>
+            <td><img src="./examples/table1/baseline_A1/116-288045-0001.png" hspace="0"></td>
+            </tr>
+          </table>
+        </div>
+        <div><b>2. Pruning MA heads in lower decoder layers</b> (A4 in Table1)<br>
+          <table border="0">
+            <tr>
+            <td><img src="./examples/table1/pruning_A4/116-288045-0000.png" hspace="50"></td>
+            <td><img src="./examples/table1/pruning_A4/116-288045-0001.png" hspace="0"></td>
+            </tr>
+          </table>
+        </div>
+        <div><b>3. HeadDrop</b> (B1 in Table1)<br>
+          <table border="0">
+            <tr>
+            <td><img src="./examples/table1/headdrop_B1/116-288045-0000.png" hspace="50"></td>
+            <td><img src="./examples/table1/headdrop_B1/116-288045-0001.png" hspace="0"></td>
+            </tr>
+          </table>
+        </div>
+        <div><b>4. HeadDrop with pruning MA heads in lower decoder layers</b> (B4 in Table1)<br>
+          <table border="0">
+            <tr>
+            <td><img src="./examples/table1/headdrop_pruning_B4/116-288045-0000.png" hspace="50"></td>
+            <td><img src="./examples/table1/headdrop_pruning_B4/116-288045-0001.png" hspace="0"></td>
+            </tr>
+          </table>
+        </div>
 
-    </div>
+      <h3>Offline MMA models with head-synchronous beam search decoding (Librispeech960h)</h3>
+        All models use HeadDrop and pruning MA heads in lower decoder layers with D_lm=3.
+        <div><b>1.w=4, H_ca=1</b> (B4 in Table2)<br>
+          <table border="0">
+            <tr>
+            <td><img src="./examples/table2/headdrop_pruning_w4_hca1_B4/116-288045-0000_headsync.png" hspace="50"></td>
+            <td><img src="./examples/table2/headdrop_pruning_w4_hca1_B4/116-288045-0001_headsync.png" hspace="0"></td>
+            </tr>
+          </table>
+        </div>
+        <div><b>2.w=16, H_ca=1</b> (D2 in Table2)<br>
+          <table border="0">
+            <tr>
+            <td><img src="./examples/table2/headdrop_pruning_w16_hca1_D2/116-288045-0000_headsync.png" hspace="50"></td>
+            <td><img src="./examples/table2/headdrop_pruning_w16_hca1_D2/116-288045-0001_headsync.png" hspace="0"></td>
+            </tr>
+          </table>
+        </div>
+        <div><b>3.w=16, H_ca=2</b> (E2 in Table2)<br>
+          <table border="0">
+            <tr>
+            <td><img src="./examples/table2/headdrop_pruning_w16_hca2_E2/116-288045-0000_headsync.png" hspace="50"></td>
+            <td><img src="./examples/table2/headdrop_pruning_w16_hca2_E2/116-288045-0001_headsync.png" hspace="0"></td>
+            </tr>
+          </table>
+        </div>
+        <div><b>4.w=16, H_ca=4</b> (E5 in Table2)<br>
+          <table border="0">
+            <tr>
+            <td><img src="./examples/table2/headdrop_pruning_w16_hca4_E5/116-288045-0000_headsync.png" hspace="50"></td>
+            <td><img src="./examples/table2/headdrop_pruning_w16_hca4_E5/116-288045-0001_headsync.png" hspace="0"></td>
+            </tr>
+          </table>
+        </div>
+
+      <h3>Streaming MMA models with head-synchronous beam search decoding</h3>
+        All models use the E5 setting in Table2.
+        <div><b>1.left/current (hop)/right=960/640/320 [ms]</b><br>
+          <table border="0">
+            <tr>
+            <td><img src="./examples/table3/headdrop_pruning_w16_hca4_E5_64_128_64/116-288045-0000_headsync.png" hspace="50"></td>
+            <td><img src="./examples/table3/headdrop_pruning_w16_hca4_E5_64_128_64/116-288045-0001_headsync.png" hspace="0"></td>
+            </tr>
+          </table>
+        </div>
+        <div><b>2.left/current (hop)/right=640/1280/640 [ms]</b><br>
+          <table border="0">
+            <tr>
+            <td><img src="./examples/table3/headdrop_pruning_w16_hca4_E5_96_64_32/116-288045-0000_headsync.png" hspace="50"></td>
+            <td><img src="./examples/table3/headdrop_pruning_w16_hca4_E5_96_64_32/116-288045-0001_headsync.png" hspace="0"></td>
+            </tr>
+          </table>
+        </div>
+
+    </main>
 
   </body>
 </html>
