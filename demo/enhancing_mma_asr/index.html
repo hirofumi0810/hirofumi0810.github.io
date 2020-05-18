@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Attenion visualization from "Enhancing Monotonic Multihead Attention for Streaming ASR"</title>
+    <link rel="stylesheet" href="./styles.css">
+    <!-- <link rel="stylesheet" href="../..//styles.css"> -->
+    <!-- <link rel="shortcut icon" href="../../images/interspeech2020_enhancing_mma_asr.png"> -->
+  </head>
+  <body>
+    <article>
+      <header>
+        <h1>Attenion visualization from "Enhancing Monotonic Multihead Attention for Streaming ASR"</h1>
+      </header>
+    </article>
+
+    <div><b>Paper:</b> <a href="https://arxiv.org/abs/***">arXiv</a></div>
+    <div><b>Code:</b> <a href="https://github.com/hirofumi0810/neural_sp">GitHub</a></div>
+    <br>
+    <div><b>Paper Title:</b> Enhancing Monotonic Multihead Attention for Streaming ASR</div>
+    <div><b>Authors:</b> Hirofumi Inaguma, Masato Mimura, Tatsuya Kawahara (Graduate School of Informatics, Kyoto University, Kyoto, Japan)</div>
+    <br>
+    <div><b>Abstract:</b>
+      We investigate a monotonic multihead attention (MMA) by extending hard monotonic attention to Transformer-based automatic speech recognition (ASR) for online streaming applications.
+      For streaming inference, all monotonic attention (MA) heads should learn proper alignments because the next token is not generated until all heads detect the corresponding token boundaries.
+      However, we found not all MA heads learn alignments with a naïve implementation.
+      To encourage every head to learn alignments properly, we propose HeadDrop regularization by masking out a part of heads stochastically during training.
+      Furthermore, we propose to prune redundant heads to improve consensus among heads for boundary detection and prevent delayed token generation caused by such heads.
+      Chunkwise attention on each MA head is extended to the multihead counterpart.
+      Finally, we propose head-synchronous beam search decoding to guarantee stable streaming inference.
+    </div>
+    <br>
+    <div><b>System overview</b><img src="../../images/interspeech2020_enhancing_mma_asr.png" alt=" " align="left" hspace="100"></div>
+
+    <div><b>Offline MMA models (Librispeech960h)</b><br>
+
+    </div>
+
+    <div><b>Streaming MMA models</b><br>
+
+    </div>
+
+  </body>
+</html>
