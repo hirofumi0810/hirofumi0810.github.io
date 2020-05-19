@@ -40,8 +40,8 @@
       Left: Utterance ID "116-288045-0000" from dev-other set<br>
       Right: Utterance ID "116-288045-0001" from dev-other set
 
-      <h3>Offline MMA models with standard beam search decoding (Librispeech960h)</h3>
-        <div><b>1. Baseline MMA</b> (A1 in Table1)<br>
+      <h3>Offline MMA models with <font color="red">standard beam search decoding</font> (Librispeech960h), Table 1</h3>
+        <div><b>A1. Baseline MMA (naive implementation), <font color="red">D_lm=0</font>, w=4, H_ma=4, H_ca=1</b><br>
           <table border="0">
             <tr>
             <td><img src="./examples/table1/baseline_A1/116-288045-0000.png" hspace="50"></td>
@@ -49,7 +49,23 @@
             </tr>
           </table>
         </div>
-        <div><b>2. Pruning MA heads in lower decoder layers</b> (A4 in Table1)<br>
+        <div><b>A2. Pruning MA heads in lower decoder layers, <font color="red">D_lm=1</font>, w=4, H_ma=4, H_ca=1</b><br>
+          <table border="0">
+            <tr>
+            <td><img src="./examples/table1/pruning_A2/116-288045-0000.png" hspace="50"></td>
+            <td><img src="./examples/table1/pruning_A2/116-288045-0001.png" hspace="0"></td>
+            </tr>
+          </table>
+        </div>
+        <div><b>A3. Pruning MA heads in lower decoder layers, <font color="red">D_lm=2</font>, w=4, H_ma=4, H_ca=1</b><br>
+          <table border="0">
+            <tr>
+            <td><img src="./examples/table1/pruning_A3/116-288045-0000.png" hspace="50"></td>
+            <td><img src="./examples/table1/pruning_A3/116-288045-0001.png" hspace="0"></td>
+            </tr>
+          </table>
+        </div>
+        <div><b>A4. Pruning MA heads in lower decoder layers, <font color="red">D_lm=3</font>, w=4, H_ma=4, H_ca=1</b><br>
           <table border="0">
             <tr>
             <td><img src="./examples/table1/pruning_A4/116-288045-0000.png" hspace="50"></td>
@@ -57,7 +73,15 @@
             </tr>
           </table>
         </div>
-        <div><b>3. HeadDrop</b> (B1 in Table1)<br>
+        <div><b>A5. Pruning MA heads in lower decoder layers, <font color="red">D_lm=4</font>, w=4, H_ma=4, H_ca=1</b><br>
+          <table border="0">
+            <tr>
+            <td><img src="./examples/table1/pruning_A5/116-288045-0000.png" hspace="50"></td>
+            <td><img src="./examples/table1/pruning_A5/116-288045-0001.png" hspace="0"></td>
+            </tr>
+          </table>
+        </div>
+        <div><b>B1. HeadDrop, <font color="red">D_lm=0</font>, w=4, H_ma=4, H_ca=1</b><br>
           <table border="0">
             <tr>
             <td><img src="./examples/table1/headdrop_B1/116-288045-0000.png" hspace="50"></td>
@@ -65,7 +89,23 @@
             </tr>
           </table>
         </div>
-        <div><b>4. HeadDrop with pruning MA heads in lower decoder layers</b> (B4 in Table1)<br>
+        <div><b>B2. HeadDrop with pruning MA heads in lower decoder layers, <font color="red">D_lm=1</font>, w=4, H_ma=4, H_ca=1</b><br>
+          <table border="0">
+            <tr>
+            <td><img src="./examples/table1/headdrop_pruning_B2/116-288045-0000.png" hspace="50"></td>
+            <td><img src="./examples/table1/headdrop_pruning_B2/116-288045-0001.png" hspace="0"></td>
+            </tr>
+          </table>
+        </div>
+        <div><b>B3. HeadDrop with pruning MA heads in lower decoder layers, <font color="red">D_lm=2</font>, w=4, H_ma=4, H_ca=1</b><br>
+          <table border="0">
+            <tr>
+            <td><img src="./examples/table1/headdrop_pruning_B3/116-288045-0000.png" hspace="50"></td>
+            <td><img src="./examples/table1/headdrop_pruning_B3/116-288045-0001.png" hspace="0"></td>
+            </tr>
+          </table>
+        </div>
+        <div><b>B4. HeadDrop with pruning MA heads in lower decoder layers, <font color="red">D_lm=3</font>, w=4, H_ma=4, H_ca=1</b><br>
           <table border="0">
             <tr>
             <td><img src="./examples/table1/headdrop_pruning_B4/116-288045-0000.png" hspace="50"></td>
@@ -73,10 +113,18 @@
             </tr>
           </table>
         </div>
+        <div><b>B5. HeadDrop with pruning MA heads in lower decoder layers, <font color="red">D_lm=4</font>, w=4, H_ma=4, H_ca=1</b><br>
+          <table border="0">
+            <tr>
+            <td><img src="./examples/table1/headdrop_pruning_B5/116-288045-0000.png" hspace="50"></td>
+            <td><img src="./examples/table1/headdrop_pruning_B5/116-288045-0001.png" hspace="0"></td>
+            </tr>
+          </table>
+        </div>
 
-      <h3>Offline MMA models with head-synchronous beam search decoding (Librispeech960h)</h3>
-        All models use HeadDrop and pruning MA heads in lower decoder layers with D_lm=3.
-        <div><b>1.w=4, H_ca=1</b> (B4 in Table2)<br>
+      <h3>Offline MMA models with <font color="red">head-synchronous beam search decoding</font> (Librispeech960h), Table2</h3>
+        All models use HeadDrop and pruning MA heads in lower decoder layers with <font color="red">D_lm=3</font>, H_ma=4.
+        <div><b>B4.w=4, H_ca=1</b><br>
           <table border="0">
             <tr>
             <td><img src="./examples/table2/headdrop_pruning_w4_hca1_B4/116-288045-0000_headsync.png" hspace="50"></td>
@@ -84,7 +132,7 @@
             </tr>
           </table>
         </div>
-        <div><b>2.w=16, H_ca=1</b> (D2 in Table2)<br>
+        <div><b>D2.w=16, H_ca=1</b><br>
           <table border="0">
             <tr>
             <td><img src="./examples/table2/headdrop_pruning_w16_hca1_D2/116-288045-0000_headsync.png" hspace="50"></td>
@@ -92,7 +140,7 @@
             </tr>
           </table>
         </div>
-        <div><b>3.w=16, H_ca=2</b> (E2 in Table2)<br>
+        <div><b>E2.w=16, H_ca=2</b><br>
           <table border="0">
             <tr>
             <td><img src="./examples/table2/headdrop_pruning_w16_hca2_E2/116-288045-0000_headsync.png" hspace="50"></td>
@@ -100,7 +148,7 @@
             </tr>
           </table>
         </div>
-        <div><b>4.w=16, H_ca=4</b> (E5 in Table2)<br>
+        <div><b>E5.w=16, H_ca=4</b><br>
           <table border="0">
             <tr>
             <td><img src="./examples/table2/headdrop_pruning_w16_hca4_E5/116-288045-0000_headsync.png" hspace="50"></td>
@@ -109,8 +157,8 @@
           </table>
         </div>
 
-      <h3>Streaming MMA models with head-synchronous beam search decoding</h3>
-        All models use the E5 setting in Table2.
+      <h3>Streaming MMA models with head-synchronous beam search decoding (Librispeech960h), Table3</h3>
+        All models use the E5 setting.
         <div><b>1.left/current (hop)/right=960/640/320 [ms]</b><br>
           <table border="0">
             <tr>
