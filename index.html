@@ -137,84 +137,66 @@
               <strong>Automatic speech recognition (ASR)</strong>
               <ul>
                 <li>End-to-end speech recognition</li>
-                <li>Multilingual end-to-end speech recognition</li>
-                <li>Language modeling</li>
                 <li>Online streaming ASR</li>
+                <li>Multilingual speech recognition</li>
+                <li>Language modeling</li>
               </ul>
 
               <strong>Speech translation</strong>
               <ul>
                 <li>End-to-end speech translation</li>
-                <li>Multilingual end-to-end speech translation</li>
+                <li>Multilingual speech translation</li>
+                <li>Non-autoregressive speech translation</li>
               </ul>
 
               <!-- research topic -->
-              <h3 id="reseach_topic">Research topic&#x1f9d0;</h3>
+              <h3 id="reseach_topic">Major publications&#x1f9d0;</h3>
 
-              <strong>Monotonic Multihead Atteniton for Streaming ASR</strong>
+              <strong>Speech translation</strong>
               <ul>
-                  <img src="images/interspeech2020_enhancing_mma_asr.png" alt=" " align="left" hspace="20">
-                  See details in
-                  [<a href="https://arxiv.org/abs/2005.09394" target="_blank" rel="nofollow">arxiv</a>] [<a href="https://hirofumi0810.github.io/demo/enhancing_mma_asr" target="_blank" rel="nofollow">demo</a>].
-                  <br clear="left">
+                  <li>
+                      Multilingual end-to-end speech translation [<a href="https://arxiv.org/abs/1910.00254" target="_blank" rel="nofollow">Inaguma et al., ASRU2019</a>].<br>
+                      <!-- <img src="images/asru2019.png" alt=" " align="left" hspace="20"> -->
+                      <!-- <br clear="left"> -->
+                  </li>
+                  <!-- <br> -->
+                  <li>
+                      ESPnet-ST [<a href="https://arxiv.org/abs/2004.10234" target="_blank" rel="nofollow">Inaguma et al., ACL2020</a>].<br>
+                  </li>
+                  <!-- <br> -->
+                  <li>
+                      Non-autoregressive speech translation [<a href="https://arxiv.org/abs/2010.13047" target="_blank" rel="nofollow">Inaguma et al., ICASSP2021</a>].<br>
+                  </li>
+                  <!-- <br> -->
+                  <li>
+                      Bidirectional knowledge distillation [<a href="https://arxiv.org/abs/2104.06457" target="_blank" rel="nofollow">Inaguma et al., NAACL-HLT2021</a>].<br>
+                  </li>
               </ul>
 
-              <strong>CTC-synchronous training for monotonic chunkwise attention (MoChA)</strong>
+              <strong>Streaming ASR</strong>
               <ul>
-                  <img src="images/interspeech2020_ctc_sync.png" alt=" " align="left" hspace="20">
-                  Proposed a new training method, CTC-synchronous training (CTC-ST), for MoChA to learn reliable alignments (token boundaries) by leveraging CTC spikes as reference alignments. MoChA with CTC-ST is very robust to long utterances. CTC-ST can also bring out the full potential of SpecAugment for MoChA. CTC is trained by sharing the same encoder and thus training is still end-to-end.
-                  <br>See details in
-                  [<a href="https://arxiv.org/abs/2005.04712" target="_blank" rel="nofollow">arxiv</a>].
-                  <br clear="left">
+                  <li>
+                      Minimum latency training [<a href="https://arxiv.org/abs/2004.05009" target="_blank" rel="nofollow">Inaguma et al., ICASSP2020</a>].<br>
+                      <!-- <img src="images/icassp2020.png" alt=" " align="left" hspace="20"> -->
+                      <!-- <br clear="left"> -->
+                  </li>
+                  <!-- <br> -->
+                  <li>
+                      CTC-synchronous training [<a href="https://arxiv.org/abs/2005.04712" target="_blank" rel="nofollow">Inaguma et al. INTERSPEECH2020</a>], [<a href="https://arxiv.org/abs/2103.00422" target="_blank" rel="nofollow">Inaguma et al., 2021</a>].<br>
+                      <!-- <img src="images/interspeech2020_ctc_sync.png" alt=" " align="left" hspace="20"> -->
+                      <!-- <br clear="left"> -->
+                  </li>
+                  <!-- <br> -->
+                  <li>
+                      StableEmit [<a href="https://arxiv.org/abs/2107.00635" target="_blank" rel="nofollow">Inaguma et al. INTERSPEECH2021</a>].<br>
+                  </li>
+                  <!-- <br> -->
+                  <li>
+                      VAD-free decoding [<a href="https://arxiv.org/abs/2107.07509" target="_blank" rel="nofollow">Inaguma et al. INTERSPEECH2021</a>].<br>
+                  </li>
+
               </ul>
 
-              <strong>Minimum latency training for online streaming sequence-to-sequence ASR</strong>
-              <ul>
-                  <img src="images/icassp2020.png" alt=" " align="left" hspace="20">
-                  Tackled the delayed token generation problem to minimize perceived latency in online streaming sequence-to-sequence ASR models. Proposed latency reduction methods by leveraging external hard alignments extracted from the conventional hybird ASR systems.
-                  <br>See details in
-                  [<a href="https://arxiv.org/abs/2004.05009" target="_blank" rel="nofollow">Inaguma et al., ICASSP2020</a>].
-                  <br clear="left">
-              </ul>
-
-              <strong>Multilingual end-to-end speech translation</strong>
-              <ul>
-                  <img src="images/asru2019.png" alt=" " align="left" hspace="20">
-                  Proposed an effective multilingual training into the end-to-end speech translation (E2E-ST) task, and showed significant improvements of translation performances compared to conventional bilingual models.
-                  <br>See details in
-                  [<a href="https://arxiv.org/abs/1910.00254" target="_blank" rel="nofollow">Inaguma et al., ASRU2019</a>].
-                  <br clear="left">
-              </ul>
-
-              <strong>Multilingual end-to-end speech recognition</strong>
-              <ul>
-                  <img src="images/icassp2019.png" alt=" " align="left" hspace="20">
-                  Proposed an adaptation starategy of the language-independent end-to-end ASR model based on a single sequence-to-sequence architecture to unseen languages by integrating information from the external language model trained on the target language.
-                  <br>See details in
-                  [<a href="https://arxiv.org/abs/1811.02134" target="_blank" rel="nofollow">Inaguma et al., ICASSP2018</a>].
-                  <br clear="left">
-              </ul>
-
-              <strong>Acoustic-to-word (A2W) sequence-to-sequence speech recognition without out-of-vocabulary (OOV) words</strong>
-              <ul>
-                  <img src="images/slt2018.png" alt=" " align="left" hspace="20">
-                  Proposed a sequence-to-sequence ASR model which directly generates whole word tokens, and resolves the out-of-vocabulary (OOV) problem by referring to the character-level hypothesis obtained from the character-level decoder by sharing the same encoder.
-                  <br>See details in
-                  [<a href="http://www.sap.ist.i.kyoto-u.ac.jp/lab/bib/intl/UEN-ICASSP18.pdf" target="_blank" rel="nofollow">Ueno et al., ICASSP2018</a>],
-                  [<a href="https://arxiv.org/abs/1909.09993" target="_blank" rel="nofollow">Inaguma et al., SLT2018</a>],
-                  [<a href="http://sap.ist.i.kyoto-u.ac.jp/lab/bib/intl/MIM-SLT18.pdf" target="_blank" rel="nofollow">Mimura et al., SLT2018</a>].
-                  <br clear="left">
-              </ul>
-
-              <strong>Joint social signal detection (SSD) and automatic speech recognition (ASR)</strong>
-              <ul>
-                  <img src="images/icassp2018.png" alt=" " align="left" hspace="20">
-                  Incorporated social signal detection (SSD) task (e.g., laughter, filler, back-chennels, and disfluencies) into the end-to-end ASR paradigm, and proposed a unified framework for both tasks.
-                  <br>See details in
-                  [<a href="http://sap.ist.i.kyoto-u.ac.jp/EN/bib/intl/INA-ICASSP18.pdf" target="_blank" rel="nofollow">Inaguma et al., ICASSP2018</a>],
-                  [<a href="https://www.isca-speech.org/archive/Interspeech_2017/pdfs/0457.PDF" target="_blank" rel="nofollow">Inaguma et al., Interspeech2017</a>].
-                  <br clear="left">
-              </ul>
 
               <!-- education -->
               <h3 id="education">Education&#x1f393;</h3>
@@ -325,6 +307,8 @@
                     ”<strong><i>Alignment Knowledge Distillation for Online Streaming Attention-based Speech Recognition</i></strong>”<br>
                     <u><strong>Hirofumi Inaguma</strong></u> and Tatsuya Kawahara<br>
                     [<a href="https://arxiv.org/abs/2103.00422" target="_blank" rel="nofollow">arxiv</a>]
+                    <br>
+                    <font color="#999900">Under review, 2021</font><br>
                 </li>
               </ul>
 
@@ -345,7 +329,7 @@
                     <u><strong>Hirofumi Inaguma</strong></u> and Tatsuya Kawahara<br>
                     [<a href="https://arxiv.org/abs/2107.00635" target="_blank" rel="nofollow">arxiv</a>]
                     <br>
-                    <font color="#999900">INTERSPEECH 2021</font>, to appear (Acceptance rate: **%)<br>
+                    <font color="#999900">INTERSPEECH 2021</font>, to appear (acceptance rate: **%)<br>
                 </li>
                 <br>
                 <li>
@@ -363,7 +347,7 @@
                     [<a href="https://arxiv.org/abs/2104.06457" target="_blank" rel="nofollow">arxiv</a>]
                     [<a href="https://www.aclweb.org/anthology/2021.naacl-main.150/" target="_blank" rel="nofollow">ACL Anthology</a>]
                     <br>
-                    <font color="#999900">NAACL-HLT 2021 (short)</font> (Acceptance rate: **%)<br>
+                    <font color="#999900">NAACL-HLT 2021</font> (acceptance rate: **%)<br>
                 </li>
                 <br>
                 <!-- ICASSP2021 -->
@@ -373,7 +357,7 @@
                     [<a href="https://arxiv.org/abs/2010.13047" target="_blank" rel="nofollow">arxiv</a>]
                     [<a href="https://ieeexplore.ieee.org/document/9415093" target="_blank" rel="nofollow">IEEE Xplore</a>]
                     <br>
-                    <font color="#999900">ICASSP 2021</font> (Acceptance rate: 48.0%)<br>
+                    <font color="#999900">ICASSP 2021</font> (acceptance rate: 48.0%)<br>
                 </li>
                 <br>
                 <!-- Interspeech2020 -->
@@ -384,7 +368,7 @@
                     [<a href="./materials/slide/202010_interspeech2020_ctc_sync.pdf" target="_blank" rel="nofollow">slide</a>]
                     [<a href="https://www.isca-speech.org/archive/Interspeech_2020/abstracts/1069.html" target="_blank" rel="nofollow">ISCA online archive</a>]
                     <br>
-                    <font color="#999900">INTERSPEECH 2020</font> (Acceptance rate: 47.0%)<br>
+                    <font color="#999900">INTERSPEECH 2020</font> (acceptance rate: 47.0%)<br>
                 </li>
                 <br>
                 <li>
@@ -418,7 +402,7 @@
                     [<a href="./materials/slide/202004_ICASSP2020.pdf" target="_blank" rel="nofollow">slide</a>]
                     [<a href="https://ieeexplore.ieee.org/document/9054098" target="_blank" rel="nofollow">IEEE Xplore</a>]
                     <br>
-                    <font color="#999900">ICASSP 2020</font> (Acceptance rate: 47%, <strong>Oral</strong>)
+                    <font color="#999900">ICASSP 2020</font> (acceptance rate: 47%, <strong>Oral</strong>)
                 </li>
                 <br>
                 <!-- ASRU2019 -->
@@ -430,7 +414,7 @@
                     [<a href="./materials/poster/201912_ASRU2019_poster.pdf" target="_blank" rel="nofollow">poster</a>]
                     [<a href="https://ieeexplore.ieee.org/document/9003832" target="_blank" rel="nofollow">IEEE Xplore</a>]
                     <br>
-                    <font color="#999900">ASRU 2019</font> (Acceptance rate: 144/299=48.1%)
+                    <font color="#999900">ASRU 2019</font> (acceptance rate: 144/299=48.1%)
                 </li>
                 <br>
                 <!-- ICASSP2019 -->
@@ -442,7 +426,7 @@
                     [<a href="./materials/poster/201905_ICASSP2019_poster.pdf" target="_blank" rel="nofollow">poster</a>]
                     [<a href="https://ieeexplore.ieee.org/document/8682918" target="_blank" rel="nofollow">IEEE Xplore</a>]
                     <br>
-                    <font color="#999900">ICASSP 2019</font> (Acceptance rate: 1774/3815=46.5%)
+                    <font color="#999900">ICASSP 2019</font> (acceptance rate: 1774/3815=46.5%)
                 </li>
                 <br>
                 <!-- SLT2018 -->
@@ -454,7 +438,7 @@
                     [<a href="./materials/poster/201812_SLT2018_poster.pdf" target="_blank" rel="nofollow">poster</a>]
                     [<a href="https://ieeexplore.ieee.org/document/8639563" target="_blank" rel="nofollow">IEEE Xplore</a>]
                     <br>
-                    <font color="#999900">SLT 2018</font> (Acceptance rate: 150/257=58.3%)
+                    <font color="#999900">SLT 2018</font> (acceptance rate: 150/257=58.3%)
                 </li>
                 <br>
                 <!-- IWSLT2018 -->
@@ -474,7 +458,7 @@
                     [<a href="./materials/poster/201804_ICASSP2018_poster.pdf" target="_blank" rel="nofollow">poster</a>]
                     [<a href="https://ieeexplore.ieee.org/document/8462578" target="_blank" rel="nofollow">IEEE Xplore</a>]
                     <br>
-                    <font color="#999900">ICASSP 2018</font> (Acceptance rate: 1406/2830=49.7%)
+                    <font color="#999900">ICASSP 2018</font> (acceptance rate: 1406/2830=49.7%)
                 </li>
                 <br>
                 <!-- Interspeech2017 -->
@@ -485,7 +469,7 @@
                     [<a href="./materials/poster/201708_Interspeech2017_poster.pdf" target="_blank" rel="nofollow">poster</a>]
                     [<a href="https://www.isca-speech.org/archive/Interspeech_2017/abstracts/0457.html" target="_blank" rel="nofollow">ISCA online archive</a>]
                     <br>
-                    <font color="#999900">INTERSPEECH 2017</font> (Acceptance rate: 799/1582=52.0%)
+                    <font color="#999900">INTERSPEECH 2017</font> (acceptance rate: 799/1582=52.0%)
                 </li>
                 <!-- <li>
                     <u><strong>Hirofumi Inaguma</strong></u>, Koji Inoue, Shizuka Nakamura, Katsuya Takanashi, and Tatsuya Kawahara,
