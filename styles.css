@@ -245,3 +245,37 @@ img{
   width: 250px;
   object-fit: contain;
 }
+
+/* Section headings inside the two tab panels.
+   Scoped to .mdl-layout__tab-panel so the <h3> in the page header
+   (the name in the purple bar) keeps MDL's own styling. */
+.mdl-layout__tab-panel h3 {
+  margin: 40px 0 16px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid #673AB7;
+  color: #333;
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 600;
+}
+.mdl-layout__tab-panel section > div > h3:first-child {
+  margin-top: 8px;
+}
+
+/* Year dividers in the Publications tab.
+   The <h4> sits directly inside the <ul>, so it inherits the list's
+   indent; the negative margin pulls it back out to the section edge. */
+.pub-year {
+  margin: 32px 0 12px -40px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid rgba(103, 58, 183, 0.25);
+  color: #673AB7;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+.pub-year:first-child {
+  margin-top: 8px;
+}
+
